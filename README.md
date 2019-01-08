@@ -1,4 +1,4 @@
-<b>Redirect to your own NGINX web server and setup SSL.</b>
+<b>Redirect HTTP to HTTPS on your own NGINX web server and setup SSL.</b>
 <br><br>
 This guide assumes that you have already setup NGINX, configured nginx.conf and have a website that you want to redirect to. We are doing this redirection server-side and not on an application level.
 <br><br>
