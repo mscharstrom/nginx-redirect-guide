@@ -2,7 +2,7 @@
 <br>
 This guide assumes that you have already setup NGINX, configured nginx.conf and have a DNS redirected to your server from your web domain. The redirection in this guide will be server-side and not on an application level. I have written/compiled this guide from multiple sources online and we are focusing only on an linux environment (I have found that many Raspberry Pi users seem to be asking questinos about this).
 <br><br>
-**Prerequisites:**<br>
+Prerequisites: <br>
 - [x] You've set an "A" (HTTP) redirect from your web domain to your own public IP of the web server.
 - [x] Your webserver is up and running and you have an example.com website on it (for eg. in /var/www/example.com/).
 - [x] I'm assuming that you are using include /etc/nginx/conf.d/*.conf; over include /etc/nginx/sites-enabled/*;. If sites-enabled are your preferred choise, please adapt accordingly in the last section.
@@ -15,7 +15,7 @@ Google has written a [great article](https://support.google.com/webmasters/answe
 2. Data integrity — data cannot be modified or corrupted during transfer, intentionally or otherwise, without being detected<br>
 3. Authentication — proves that your users communicate with the intended website. It protects against man-in-the-middle attacks and builds user trust, which translates into other business benefits.<br>
 
-##<b>Let's Encrypt!</b></br><br>
+## <b>Let's Encrypt!</b></br><br>
 To be able to redirect your HTTP to HTTPS you will need valid certificates. To get this we are going to use Let's Encrypt which is a free service that allows you to create SSL certificates. Keep in mind that these certificates are kinda short lifed. <br>
 
 Start with making sure that you are all up to date:<br>
