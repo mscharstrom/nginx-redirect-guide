@@ -41,6 +41,15 @@ Now let's create some free SSL certifications! Make sure to change out example.c
 ```
 letsencrypt certonly --webroot -w /var/www/example.com -d example.com -d www.example.com
 ```
+We are also going to create some DH parameters. Here is a [post](https://security.stackexchange.com/questions/94390/whats-the-purpose-of-dh-parameters) that explains DH a bit more in detail. Start off with browsing to this directory:<br>
+```
+cd /etc/ssl/certs/
+```
+Generate the certificate:
+```
+openssl dhparam -out dhparam.pem 4096
+```
+Done - Lets get NGINX up running with the certificates.
 
 <b>Certificate done, whats next?!</b><br>
 Here are the bits and bops that you need to add to your example.com.conf file. If this is unclear, please check my own example file example.com.conf in this repository for further details. <br>
