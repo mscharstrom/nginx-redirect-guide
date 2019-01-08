@@ -1,4 +1,4 @@
-<b>Redirect HTTP to HTTPS on your own NGINX web server and setup SSL.</b>
+#<b>Redirect HTTP to HTTPS on your own NGINX web server and setup SSL.</b>
 <br><br>
 This guide assumes that you have already setup NGINX, configured nginx.conf and have a DNS redirected to your server from your web domain. The redirection in this guide will be server-side and not on an application level. I have written/compiled this guide from multiple sources online and we are focusing only on an linux environment (I have found that many Raspberry Pi users seem to be asking questinos about this).
 <br><br>
@@ -7,7 +7,7 @@ Other prerequisites:<br>
 - [x] Your webserver is up and running and you have an example.com website on it (for eg. in /var/www/example.com/).
 - [x] I'm assuming that you are using include /etc/nginx/conf.d/*.conf; over include /etc/nginx/sites-enabled/*;. If sites-enabled are your preferred choise, please adapt accordingly in the last section.
 
-<b>Why even bother?</b><br>
+##<b>Why even bother?</b><br>
 Without SSL, your website will show insecure to the visitors. SSL encrypts requests made between a web server and a visitors browser and it also make requests and responsens happen in a way so that they can't be intercepted. The certificates that is being authenticated makes sure that the certificate isn't intended for a different domain, if so the user will get alerted and the browser will most likely block the request. Users today expect a secure and private online experience when using a website. It is more or less default nowadays to use TLS/SSL (HTTPS).<br>
 
 Google has written a [great article](https://support.google.com/webmasters/answer/6073543?hl=en) on this matter with a handful of useful tips. In short it provides three key layers of protection: <br>
@@ -15,7 +15,7 @@ Google has written a [great article](https://support.google.com/webmasters/answe
 2. Data integrity — data cannot be modified or corrupted during transfer, intentionally or otherwise, without being detected<br>
 3. Authentication — proves that your users communicate with the intended website. It protects against man-in-the-middle attacks and builds user trust, which translates into other business benefits.<br>
 
-<b>Let's Encrypt!</b></br>
+##<b>Let's Encrypt!</b></br><br>
 To be able to redirect your HTTP to HTTPS you will need valid certificates. To get this we are going to use Let's Encrypt which is a free service that allows you to create SSL certificates. Keep in mind that these certificates are kinda short lifed. <br>
 
 Start with making sure that you are all up to date:<br>
@@ -43,7 +43,7 @@ openssl dhparam -out dhparam.pem 4096
 ```
 Now lets get NGINX up running with these certificates!
 
-<b>Certificate done, whats next?!</b><br>
+##<b>Certificate done, whats next?!</b><br><br>
 Here is the code that you need to add to your example.com.conf file. If any of the following code is unclear, please check  the example file *example.com.conf* in this repository for further details and functions (such as ssl_session_timeout) <br>
 
 ```
@@ -73,9 +73,9 @@ Make sure to update all the example.com text with your own file paths and /path/
 /etc/letsencrypt/live/your_example/privkey.pem 
 ```
 
-Done! Please let me know if you have any questions in the comment section. Hope this guide helps you out.<br>
+Done!<br>
+Please let me know if you have any questions in the comment section. Hope this guide helps you out.<br>
 
-References:<br>
+Most of the material in this guide comes from both these two references:<br>
 [Stewright.me](https://www.stewright.me/2017/01/add-ssl-nginx-site-free-lets-encrypt/)<br>
-[dnsimple.com](https://support.dnsimple.com/articles/redirector-https/)<br>
 [dnsimple.com blog post](https://blog.dnsimple.com/2016/08/https-redirects/)<br>
