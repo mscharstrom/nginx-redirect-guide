@@ -16,10 +16,10 @@ http://example.com &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&
 https://example.com &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HTTPS<br>
 http://www.example.com &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HTTP + "www"<br>
 https://www.example.com &nbsp;&nbsp;&nbsp;HTTPS + "www"<br><br>
+<b>Let's Encrypt!</b></br>
+To be able to redirect your HTTP to HTTPS you will need valid certificates.
 
-
-
-<b>I don't care, just show me the code!</b><br>
+<b>Certificate done, whats next?!</b><br>
 Here are the bits and bops that you need to add to your example.com.conf file. If this is unclear, please check my own example file example.com.conf in this repository for further details. <br>
 <br>
 ```
