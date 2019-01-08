@@ -56,7 +56,7 @@ Done - Now lets get NGINX up running with the certificates.
 Here is the code that you need to add to your example.com.conf file. If any of the following code is unclear, please check my own example file *example.com.conf* in this repository for further details. <br>
 
 ```
-  server {
+server {
   listen 80;
   server_name example.com www.example.com;
   return 301 https://example.com$request_uri;
@@ -76,3 +76,8 @@ server {
   }
 }
 ```
+Make sure to update all the example.com text with your own file paths and /path/to/ to where your created certificates are placed. Usually the certificates ends up in:
+```
+/etc/letsencrypt/live/your_example/fullchain.pem 
+/etc/letsencrypt/live/your_example/privkey.pem 
+
