@@ -5,6 +5,7 @@ This guide assumes that you have already setup NGINX, configured nginx.conf and 
 Other prerequisites:<br>
 - [x] You've set an "A" (HTTP) redirect from your web domain to your own public IP of the web server.
 - [x] Your webserver is up and running and you have an example.com website on it (for eg. in /var/www/example.com/).
+- [x] I'm assuming that you are using include /etc/nginx/conf.d/*.conf; over include /etc/nginx/sites-enabled/*;. If sites-enabled are your preferred choise, please adapt accordingly in the last section.
 
 <b>Why even bother?</b><br>
 Without SSL, your website will show insecure to the visitors. SSL encrypts requests made between a web server and a visitors browser and it also make requests and responsens happen in a way so that they can't be intercepted. The certificates that is being authenticated makes sure that the certificate isn't intended for a different domain, if so the user will get alerted and the browser will most likely block the request. Users today expect a secure and private online experience when using a website. It is more or less default nowadays to use TLS/SSL (HTTPS).<br>
@@ -52,13 +53,8 @@ openssl dhparam -out dhparam.pem 4096
 Done - Now lets get NGINX up running with the certificates.
 
 <b>Certificate done, whats next?!</b><br>
-Here are the bits and bops that you need to add to your example.com.conf file. I'm assuming that you are using<br>
-> include /etc/nginx/conf.d/*.conf;
-instead of<br>
-> include /etc/nginx/sites-enabled/*;
-in your nginx.conf file. If any of the following code is unclear, please check my own example file *example.com.conf* in this repository for further details. <br>
-Here are the bits and bops that you need to add to your example.com.conf file. I'm assuming that you are using<br>include /etc/nginx/conf.d/*.conf; instead of >include /etc/nginx/sites-enabled/*; in your nginx.conf file. If any of the following code is unclear, please check my own example file *example.com.conf* in this repository for further details. <br>
-<br>
+Here is the code that you need to add to your example.com.conf file. If any of the following code is unclear, please check my own example file *example.com.conf* in this repository for further details. <br>
+
 ```
   server {
   listen 80;
