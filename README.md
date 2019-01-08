@@ -78,6 +78,7 @@ Make sure to update all the example.com text with your own file paths and /path/
 Hope this guide has been helpful!<br>
 Please let me know if you have any questions in the comment section. <br><br>
 
-*Most of the material in this guide comes from both these two references (huge thanks! :+1:):<br>
+*Most of the material in this guide comes from both the two first references (huge thanks! :+1:):<br>
 [Stewright.me](https://www.stewright.me/2017/01/add-ssl-nginx-site-free-lets-encrypt/)<br>
-[dnsimple.com blog post](https://blog.dnsimple.com/2016/08/https-redirects/)<br>*
+[dnsimple.com blog post](https://blog.dnsimple.com/2016/08/https-redirects/)<br>
+[NGINX Docs](http://nginx.org/en/docs/)<br>*
