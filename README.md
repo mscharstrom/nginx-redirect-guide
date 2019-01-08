@@ -38,7 +38,7 @@ We are also going to create some DH parameters. Here is a [post](https://securit
 ```
 cd /etc/ssl/certs/
 ```
-Generate the certificate:
+Generate the certificate (quite a long process):
 ```
 openssl dhparam -out dhparam.pem 4096
 ```
