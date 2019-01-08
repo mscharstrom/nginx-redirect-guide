@@ -74,9 +74,9 @@ Make sure to update all the example.com text with your own file paths and /path/
 /etc/letsencrypt/live/your_example/privkey.pem 
 ```
 <br>
-**Done!**<br><br>
+<b>Done!</b><br><br>
 Hope this guide has been helpful!<br>
-Please let me know if you have any questions in the comment section. <br>
+Please let me know if you have any questions in the comment section. <br><br>
 
 *Most of the material in this guide comes from both these two references (huge thanks! :+1:):<br>
 [Stewright.me](https://www.stewright.me/2017/01/add-ssl-nginx-site-free-lets-encrypt/)<br>
