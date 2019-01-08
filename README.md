@@ -2,7 +2,7 @@
 <br>
 This guide assumes that you have already setup NGINX, configured nginx.conf and have a DNS redirected to your server from your web domain. The redirection in this guide will be server-side and not on an application level. I have written/compiled this guide from multiple sources online and we are focusing only on an linux environment (I have found that many Raspberry Pi users seem to be asking questinos about this).
 <br><br>
-**Prerequisites:** <br>
+
 - [x] You've set an "A" (HTTP) redirect from your web domain to your own public IP of the web server.
 - [x] Your webserver is up and running and you have an example.com website on it (for eg. in /var/www/example.com/).
 - [x] I'm assuming that you are using include /etc/nginx/conf.d/*.conf; over include /etc/nginx/sites-enabled/*;. If sites-enabled are your preferred choise, please adapt accordingly in the last section.
