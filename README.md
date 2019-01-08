@@ -52,7 +52,12 @@ openssl dhparam -out dhparam.pem 4096
 Done - Now lets get NGINX up running with the certificates.
 
 <b>Certificate done, whats next?!</b><br>
-Here are the bits and bops that you need to add to your example.com.conf file. I'm assuming that you are using include >/etc/nginx/conf.d/*.conf; instead of >include /etc/nginx/sites-enabled/*; in your nginx.conf file. If any of the following code is unclear, please check my own example file *example.com.conf* in this repository for further details. <br>
+Here are the bits and bops that you need to add to your example.com.conf file. I'm assuming that you are using<br>
+> include /etc/nginx/conf.d/*.conf;
+instead of<br>
+> include /etc/nginx/sites-enabled/*;
+in your nginx.conf file. If any of the following code is unclear, please check my own example file *example.com.conf* in this repository for further details. <br>
+Here are the bits and bops that you need to add to your example.com.conf file. I'm assuming that you are using<br>include /etc/nginx/conf.d/*.conf; instead of >include /etc/nginx/sites-enabled/*; in your nginx.conf file. If any of the following code is unclear, please check my own example file *example.com.conf* in this repository for further details. <br>
 <br>
 ```
   server {
