@@ -1,6 +1,6 @@
 <b>Redirect HTTP to HTTPS on your own NGINX web server and setup SSL.</b>
 <br><br>
-This guide assumes that you have already setup NGINX, configured nginx.conf and have DNS redirected to your server from your web hotel. The redirection in this guide will be server-side and not on an application level. I have written/compiled this guide from multiple sources online and we are focusing only on an linux environment (I have found that many Raspberry Pi users seem to be asking questinos about this).
+This guide assumes that you have already setup NGINX, configured nginx.conf and have a DNS redirected to your server from your web hotel/domain. The redirection in this guide will be server-side and not on an application level. I have written/compiled this guide from multiple sources online and we are focusing only on an linux environment (I have found that many Raspberry Pi users seem to be asking questinos about this).
 <br><br>
 Other prerequisites:<br>
 - [x] You've set an "A" (HTTP) redirect from your web hotel to your own public IP of the webserver.
@@ -49,7 +49,7 @@ Generate the certificate:
 ```
 openssl dhparam -out dhparam.pem 4096
 ```
-Done - Lets get NGINX up running with the certificates.
+Done - Now lets get NGINX up running with the certificates.
 
 <b>Certificate done, whats next?!</b><br>
 Here are the bits and bops that you need to add to your example.com.conf file. If this is unclear, please check my own example file example.com.conf in this repository for further details. <br>
