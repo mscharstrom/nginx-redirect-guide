@@ -38,7 +38,12 @@ Next install Let's Encrypt:<br>
 ```
 sudo apt-get install letsencrypt
 ````
-<br>
+
+Now let's create some free SSL certifications! Make sure to change out example.com to your specific folder and the file path /var/www/ if your web app is located elsewhere:<br>
+```
+letsencrypt certonly --webroot -w /var/www/example.com -d example.com -d www.example.com
+```
+
 
 <b>Certificate done, whats next?!</b><br>
 Here are the bits and bops that you need to add to your example.com.conf file. If this is unclear, please check my own example file example.com.conf in this repository for further details. <br>
