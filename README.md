@@ -14,7 +14,6 @@ Google has written a [great article](https://support.google.com/webmasters/answe
 2. Data integrity — data cannot be modified or corrupted during transfer, intentionally or otherwise, without being detected<br>
 3. Authentication — proves that your users communicate with the intended website. It protects against man-in-the-middle attacks and builds user trust, which translates into other business benefits.<br>
 
-<br>
 Worth noting is that previously one only had to redirect from an www.example.com to example.com and/or vice-versa. Since the implementation of HTTPS we now have 4 options to enter a website that we have to take in consideration.<br>
 <br>
 http://example.com &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HTTP<br>
