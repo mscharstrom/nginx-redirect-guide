@@ -5,7 +5,7 @@ This guide assumes that you have already setup NGINX, configured nginx.conf and 
 <br>
 
 - [x] You've set an "A" (HTTP) redirect from your web domain to your own public IP of the web server.
-- [x] Your webserver is up and running and you have an example.com website on it (for eg. in /var/www/example.com/).
+- [x] Your web server is up and running and you have an example.com website on it (for eg. in /var/www/example.com/).
 - [x] I'm assuming that you are using include /etc/nginx/conf.d/*.conf; over include /etc/nginx/sites-enabled/*;. If sites-enabled are your preferred choise, please adapt accordingly in the last section.
 
 ### <b>Why even bother?</b><br>
