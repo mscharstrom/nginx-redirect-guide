@@ -31,7 +31,6 @@ Start with making sure that you are all up to date:<br>
 sudo apt-get update
 sudo apt get upgrade
 ```
-<br>
 
 Next install Let's Encrypt:<br>
 ```
