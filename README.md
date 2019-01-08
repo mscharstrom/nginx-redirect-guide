@@ -2,7 +2,7 @@
 <br>
 This guide assumes that you have already setup NGINX, configured nginx.conf and have a DNS redirected to your server from your web domain. The redirection in this guide will be server-side and not on an application level. I have written/compiled this guide from multiple sources online and we are focusing only on an linux environment (I have found that many Raspberry Pi users seem to be asking questinos about this).
 <br><br>
-
+Prerequisites:
 - [x] You've set an "A" (HTTP) redirect from your web domain to your own public IP of the web server.
 - [x] Your webserver is up and running and you have an example.com website on it (for eg. in /var/www/example.com/).
 - [x] I'm assuming that you are using include /etc/nginx/conf.d/*.conf; over include /etc/nginx/sites-enabled/*;. If sites-enabled are your preferred choise, please adapt accordingly in the last section.
@@ -74,8 +74,9 @@ Make sure to update all the example.com text with your own file paths and /path/
 ```
 
 **Done!**<br><br>
-Please let me know if you have any questions in the comment section. Hope this guide helps you out!<br><br>
+Hope this guide has been helpful.<br>
+Please let me know if you have any questions in the comment section. <br>
 
-*Most of the material in this guide comes from both these two references (huge thanks!):<br>
+*Most of the material in this guide comes from both these two references (huge thanks! :+1:):<br>
 [Stewright.me](https://www.stewright.me/2017/01/add-ssl-nginx-site-free-lets-encrypt/)<br>
 [dnsimple.com blog post](https://blog.dnsimple.com/2016/08/https-redirects/)<br>*
