@@ -15,15 +15,6 @@ Google has written a [great article](https://support.google.com/webmasters/answe
 2. Data integrity — data cannot be modified or corrupted during transfer, intentionally or otherwise, without being detected<br>
 3. Authentication — proves that your users communicate with the intended website. It protects against man-in-the-middle attacks and builds user trust, which translates into other business benefits.<br>
 
-Worth noting is that previously one only had to redirect from an www.example.com to example.com and/or vice-versa. Since the implementation of HTTPS we now have 4 options to enter a website that we have to take in consideration.<br>
-<br>
-http://example.com &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HTTP<br>
-https://example.com &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HTTPS<br>
-http://www.example.com &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HTTP + "www"<br>
-https://www.example.com &nbsp;&nbsp;&nbsp;HTTPS + "www"<br>
-
-But fear not, the process is fairly simple.<br>
-
 <b>Let's Encrypt!</b></br>
 To be able to redirect your HTTP to HTTPS you will need valid certificates. To get this we are going to use Let's Encrypt which is a free service that allows you to create SSL certificates. Keep in mind that these certificates are kinda short lifed. <br>
 
@@ -50,10 +41,10 @@ Generate the certificate:
 ```
 openssl dhparam -out dhparam.pem 4096
 ```
-Done - Now lets get NGINX up running with the certificates.
+Now lets get NGINX up running with these certificates!
 
 <b>Certificate done, whats next?!</b><br>
-Here is the code that you need to add to your example.com.conf file. If any of the following code is unclear, please check my own example file *example.com.conf* in this repository for further details. <br>
+Here is the code that you need to add to your example.com.conf file. If any of the following code is unclear, please check  the example file *example.com.conf* in this repository for further details and functions (such as ssl_session_timeout) <br>
 
 ```
 server {
@@ -80,4 +71,11 @@ Make sure to update all the example.com text with your own file paths and /path/
 ```
 /etc/letsencrypt/live/your_example/fullchain.pem 
 /etc/letsencrypt/live/your_example/privkey.pem 
+```
 
+Done! Please let me know if you have any questions in the comment section. Hope this guide helps you out.<br>
+
+References:<br>
+[Stewright.me](https://www.stewright.me/2017/01/add-ssl-nginx-site-free-lets-encrypt/)<br>
+[dnsimple.com](https://support.dnsimple.com/articles/redirector-https/)<br>
+[dnsimple.com blog post](https://blog.dnsimple.com/2016/08/https-redirects/)<br>
