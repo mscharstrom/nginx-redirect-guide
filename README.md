@@ -44,7 +44,6 @@ Now let's create some free SSL certifications! Make sure to change out example.c
 letsencrypt certonly --webroot -w /var/www/example.com -d example.com -d www.example.com
 ```
 
-
 <b>Certificate done, whats next?!</b><br>
 Here are the bits and bops that you need to add to your example.com.conf file. If this is unclear, please check my own example file example.com.conf in this repository for further details. <br>
 <br>
