@@ -1,11 +1,10 @@
-<b>Redirect domain to your own NGINX web server and setup SSL.</b>
+<b>Redirect to your own NGINX web server and setup SSL.</b>
 <br><br>
 This guide assumes that you have already setup NGINX, configured nginx.conf and have a website that you want to redirect to. We are doing this redirection server-side and not on an application level.
 <br><br>
 Other prerequisites:<br>
 - [x] You've set an "A" (HTTP) redirect from your web hotel to your own public IP of the webserver.
 - [x] Your webserver is up and running and you have an example.com website on it (for eg. in /var/www/example.com/).
-- [x] Configure nginx.conf to include "/etc/nginx/conf.d/*.conf" and not "/etc/nginx/sites-enabled*;".
 
 <b>Why even bother?</b><br>
 Without SSL, your website will show insecure to the visitors. SSL encrypts requests made between a web server and a visitors browser and it also make requests and responsens happen in a way so that they can't be intercepted. The certificates that is being authenticated makes sure that the certificate isn't intended for a different domain, if so the user will get alerted and the browser will most likely block the request. Users today expect a secure and private online experience when using a website. It is more or less default nowadays to use TLS/SSL (HTTPS).<br><br>
