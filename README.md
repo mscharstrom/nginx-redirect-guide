@@ -19,7 +19,7 @@ Worth noting is that previously one only had to redirect from an www.example.com
 http://example.com &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HTTP<br>
 https://example.com &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HTTPS<br>
 http://www.example.com &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HTTP + "www"<br>
-https://www.example.com &nbsp;&nbsp;&nbsp;HTTPS + "www"<br><br>
+https://www.example.com &nbsp;&nbsp;&nbsp;HTTPS + "www"<br>
 
 But fear not, the process is fairly simple.<br>
 
