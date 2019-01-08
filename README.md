@@ -5,4 +5,4 @@ This guide assumes that you have already setup NGINX, configured nginx.conf and 
 Other prerequisites:<br>
 - [x] You've set an "A" redirect from your web hotel to your own public IP of the webserver.
 - [x] Your webserver is up and running and you have an example.com website on it (for eg. in /var/www/example.com/).
-- I've configured my nginx.conf to include "/etc/nginx/conf.d/*.conf" and not "/etc/nginx/sites-enabled*;". Do what you prefer.
+- [x] Configure nginx.conf to include "/etc/nginx/conf.d/*.conf" and not "/etc/nginx/sites-enabled*;".
