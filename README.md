@@ -1,6 +1,6 @@
 <b>Redirect domain to your own NGINX web server and setup SSL.</b>
 <br><br>
-This guide assumes that you have already setup NGINX, configured nginx.conf and have a website that you want to redirect to. We are doing this redirection in our NGINX server and not on an application level.
+This guide assumes that you have already setup NGINX, configured nginx.conf and have a website that you want to redirect to. We are doing this redirection server-side and not on an application level.
 <br><br>
 Other prerequisites:<br>
 - [x] You've set an "A" (HTTP) redirect from your web hotel to your own public IP of the webserver.
@@ -8,7 +8,9 @@ Other prerequisites:<br>
 - [x] Configure nginx.conf to include "/etc/nginx/conf.d/*.conf" and not "/etc/nginx/sites-enabled*;".
 
 <b>Why even bother?</b><br>
-Without SSL, your website will show insecure to the visitors. Therefore, using an SSL-encrypted connection for safety, accessibility or PCI compliance reasons is necessary. It becomes very important to redirect from HTTP to HTTPS and it is more or less default nowadays to use HTTPS.<br>
+Without SSL, your website will show insecure to the visitors. SSL encrypts requests made between a web server and a visitors browser and it also make requests and responsens happen in a way so that they can't be intercepted. The certificates that is being authenticated makes sure that the certificate isn't intended for a different domain, if so the user will get alerted and the browser will most likely block the request. Users today expect a secure and private online experience when using a website. It is more or less default nowadays to use TLS/SSL (HTTPS).<br><br>
+Google has written a [great article](https://support.google.com/webmasters/answer/6073543?hl=en) on this. <br>
+
 <br>
 Previously, one only had to redirect from an www.example.com to example.com and/or vice-versa. Since the implementation of HTTPS we now have 4 options to enter a website that we have to take in considiration.<br>
 <br>
