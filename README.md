@@ -9,18 +9,21 @@ Other prerequisites:<br>
 <b>Why even bother?</b><br>
 Without SSL, your website will show insecure to the visitors. SSL encrypts requests made between a web server and a visitors browser and it also make requests and responsens happen in a way so that they can't be intercepted. The certificates that is being authenticated makes sure that the certificate isn't intended for a different domain, if so the user will get alerted and the browser will most likely block the request. Users today expect a secure and private online experience when using a website. It is more or less default nowadays to use TLS/SSL (HTTPS).<br><br>
 
-Google has written a [great article](https://support.google.com/webmasters/answer/6073543?hl=en) on this. In short it provides three key layers of protection: <br><br>
+Google has written a [great article](https://support.google.com/webmasters/answer/6073543?hl=en) on this. In short it provides three key layers of protection: <br>
 1. Encryption — encrypting the exchanged data to keep it secure from eavesdroppers. That means that while the user is browsing a website, nobody can "listen" to their conversations, track their activities across multiple pages, or steal their information.<br>
 2. Data integrity — data cannot be modified or corrupted during transfer, intentionally or otherwise, without being detected<br>
 3. Authentication — proves that your users communicate with the intended website. It protects against man-in-the-middle attacks and builds user trust, which translates into other business benefits.<br>
 
 <br>
-Previously, one only had to redirect from an www.example.com to example.com and/or vice-versa. Since the implementation of HTTPS we now have 4 options to enter a website that we have to take in considiration.<br>
+Worth nothing is that previously one only had to redirect from an www.example.com to example.com and/or vice-versa. Since the implementation of HTTPS we now have 4 options to enter a website that we have to take in considiration.<br>
 <br>
 http://example.com &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HTTP<br>
 https://example.com &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HTTPS<br>
 http://www.example.com &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HTTP + "www"<br>
 https://www.example.com &nbsp;&nbsp;&nbsp;HTTPS + "www"<br><br>
+
+But fear not, the process is fairly simple.<br>
+
 <b>Let's Encrypt!</b></br>
 To be able to redirect your HTTP to HTTPS you will need valid certificates.
 
